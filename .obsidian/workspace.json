@@ -1,0 +1,176 @@
+{
+  "main": {
+    "id": "c819a68f1da11bc3",
+    "type": "split",
+    "children": [
+      {
+        "id": "8fc8fe6a5fd5893e",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "80dc41f0a7fb3fcc",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "python1/source/M1Y1. Черепашка – друг программиста.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "M1Y1. Черепашка – друг программиста"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "878c4baa4451d916",
+    "type": "split",
+    "children": [
+      {
+        "id": "dd728241923f607b",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "da496c9666d111b6",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Files"
+            }
+          },
+          {
+            "id": "8fffdb0b2558651c",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Search"
+            }
+          },
+          {
+            "id": "6e75ed702a84bea5",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Bookmarks"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "a686cc249aa45179",
+    "type": "split",
+    "children": [
+      {
+        "id": "39e9e87b767cdf5d",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "2226f3ca16c0d6c6",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "python1/source/M1Y1. Черепашка – друг программиста.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks for M1Y1. Черепашка – друг программиста"
+            }
+          },
+          {
+            "id": "5f8892b5f1f411d4",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "python1/source/M1Y1. Черепашка – друг программиста.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Outgoing links from M1Y1. Черепашка – друг программиста"
+            }
+          },
+          {
+            "id": "4e450c538cc37437",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
+            }
+          },
+          {
+            "id": "3ac9437e28cd1042",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "python1/source/M1Y1. Черепашка – друг программиста.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Outline of M1Y1. Черепашка – друг программиста"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false
+    }
+  },
+  "active": "80dc41f0a7fb3fcc",
+  "lastOpenFiles": [
+    "python1/M1Y1. Черепашка – друг программиста.pdf",
+    "python1/source/M1Y1. Черепашка – друг программиста.md"
+  ]
+}
