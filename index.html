@@ -4,61 +4,51 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="https://avatars.githubusercontent.com/u/154306331?v=4"> 
-    <link rel="favicon" href="https://avatars.githubusercontent.com/u/154306331?v=4"> 
     <title>Proxy | illmilo</title>
     <link rel="stylesheet" href="src/css/style.css">
+    <!-- font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
-<body class="container">
-    
-    <!-- about me -->
-    <div id="readme-container">
-        <!-- to be populated by js -->
+<body>
+    <div class="wrapper">
+        <!-- Navigation -->
+        <header>
+            <img id="logo" src="https://avatars.githubusercontent.com/u/154306331?v=4" alt="Logo">
+            <nav>
+                <ul>
+                    <li>
+                        <a href="index.html">
+                            <i class="fa-solid fa-house"></i>
+                            <span class="text">Home</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://github.com/illmilo">
+                            <i class="fa-brands fa-github"></i>
+                            <span class="text">GitHub</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+
+        <!-- Projects -->
+        <section class="projects">
+            <h2>Projects</h2>
+            <ul>
+                <li><a href="https://illmilo.github.io/">illmilo.github.io</a></li>
+                <li><a href="https://cyberlisa.vercel.app/">cyberlisa.vercel.app</a></li>
+                <li><a href="https://algoriff.vercel.app/">algoriff.vercel.app</a></li>
+            </ul>
+        </section>
+
+        <!-- README Content -->
+        <main id="readme-container">
+            <!-- Content loaded by readmeParser.js -->
+        </main>
     </div>
 
-    <!-- proxy list -->
-    <nav>
-        <ul>
-            <li><img id="logo" src="https://avatars.githubusercontent.com/u/154306331?v=4"></li>
-            <li>
-                <a href="index.html" class="water-link">
-                    <span class="normal-text">Home</span>
-                    <span class="water-effect">Home</span>
-                </a>
-            </li>
-            <li>
-                <a href="https://github.com/illmilo" class="water-link">
-                    <span class="normal-text">Github</span>
-                    <span class="water-effect">Github</span>
-                </a>
-            </li>
-            <li>
-                <a href="https://t.me/illmilo" class="water-link">
-                    <span class="normal-text">Telegram</span>
-                    <span class="water-effect">Telegram</span>
-                </a>
-            </li>
-        </ul>
-    </nav>
-    
-    <!-- projects demo list -->
-    <nav>
-        <ul>
-            <li>
-                <a href="https://cyberlisa.vercel.app/" class="water-link">
-                    <span class="normal-text">cyberlisa.vercel.app</span>
-                    <span class="water-effect">cyberlisa.vercel.app</span>
-                </a>
-            </li>
-            <li>
-                <a href="https://algoriff.vercel.app/" class="water-link">
-                    <span class="normal-text">algoriff.vercel.app</span>
-                    <span class="water-effect">algoriff.vercel.app</span>
-                </a>
-            </li>
-        </ul>
-    </nav>
-
-    <script src="src/js/buttonToggle.js"></script>
     <script src="src/js/readmeParser.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+</body>
 </html>
