@@ -5,9 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="https://avatars.githubusercontent.com/u/154306331?v=4"> 
     <title>Proxy | illmilo</title>
-    <link rel="stylesheet" href="src/css/style.css">
     <!-- font awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="src/css/style.css">
 </head>
 <body>
     <div class="wrapper">
@@ -17,38 +17,58 @@
             <nav>
                 <ul>
                     <li>
-                        <a href="index.html">
+                        <a href="index.html" class="nav-button home">
                             <i class="fa-solid fa-house"></i>
                             <span class="text">Home</span>
                         </a>
                     </li>
                     <li>
-                        <a href="https://github.com/illmilo">
+                        <a href="https://github.com/illmilo" class="nav-button">
                             <i class="fa-brands fa-github"></i>
                             <span class="text">GitHub</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="mailto:illfqm@gmail.com" class="nav-button">
+                            <i class="fa-solid fa-envelope"></i>
+                            <span class="text">Gmail</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://t.me/illmilo" class="nav-button">
+                            <i class="fa-brands fa-telegram"></i>
+                            <span class="text">Telegram</span>
                         </a>
                     </li>
                 </ul>
             </nav>
         </header>
-
+        
+        <!-- README Content -->
+        <section class="tech-stack">
+            <h2 class="section-title">My Tech Stack</h2>
+            <div id="readme-container">
+                <div class="loading">
+                    <div class="spinner"></div>
+                </div>
+            </div>
+        </section>
+        
         <!-- Projects -->
         <section class="projects">
-            <h2>Projects</h2>
-            <ul>
-                <li><a href="https://illmilo.github.io/">illmilo.github.io</a></li>
-                <li><a href="https://cyberlisa.vercel.app/">cyberlisa.vercel.app</a></li>
-                <li><a href="https://algoriff.vercel.app/">algoriff.vercel.app</a></li>
-            </ul>
+            <h2 class="section-title">My Projects</h2>
+            <div id="github-projects">
+                <div class="loading">
+                    <div class="spinner"></div>
+                </div>
+            </div>
         </section>
-
-        <!-- README Content -->
-        <main id="readme-container">
-            <!-- Content loaded by readmeParser.js -->
-        </main>
     </div>
 
-    <script src="src/js/readmeParser.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script src="src/js/repoParser.js"></script>
+    <script src="src/js/toggleLogo.js"></script>
+    <script src="src/js/readmeParser.js"></script>
+    <script src="src/js/removeContacts.js"></script>
 </body>
 </html>
