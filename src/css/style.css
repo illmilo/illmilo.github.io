@@ -1,375 +1,374 @@
 /* Base Styles - Notion Inspired */
-        :root {
-            --bg-primary: #191919;
-            --bg-secondary: #1f1f1f;
-            --bg-tertiary: #2d2d2d;
-            --text-primary: #ededed;
-            --text-secondary: #a5a5a5;
-            --text-tertiary: #7a7a7a;
-            --accent: #7b68ee;
-            --accent-hover: #8b7bf0;
-            --border: #3d3d3d;
-            --card-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
-            --transition: all 0.2s ease;
-        }
+:root {
+    --bg-primary: #191919;
+    --bg-secondary: #1f1f1f;
+    --bg-tertiary: #2d2d2d;
+    --text-primary: #ededed;
+    --text-secondary: #a5a5a5;
+    --text-tertiary: #7a7a7a;
+    --accent: #7b68ee;
+    --accent-hover: #8b7bf0;
+    --border: #3d3d3d;
+    --card-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    --transition: all 0.2s ease;
+}
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Inter', Roboto, sans-serif;
-            line-height: 1.6;
-            color: var(--text-primary);
-            background-color: var(--bg-primary);
-            padding: 0;
-            overflow-x: hidden;
-        }
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Inter', Roboto, sans-serif;
+    line-height: 1.6;
+    color: var(--text-primary);
+    background-color: var(--bg-primary);
+    padding: 0;
+    overflow-x: hidden;
+}
 
-        .wrapper {
-            max-width: 900px;
-            margin: 0 auto;
-            padding: 2rem;
-        }
+.wrapper {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 2rem;
+}
 
-        /* Header & Navigation */
-        header {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            margin-bottom: 2.5rem;
-            padding: 1rem 0;
-            border-bottom: 1px solid var(--border);
-        }
+/* Header & Navigation */
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 2.5rem;
+    padding: 1rem 0;
+    border-bottom: 1px solid var(--border);
+}
 
-        #logo {
-            width: 48px;
-            height: 48px;
-            border-radius: 50%;
-            cursor: pointer;
-            transition: transform 0.3s ease;
-            object-fit: cover;
-        }
+#logo {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    object-fit: cover;
+}
 
-        #logo:hover {
-            transform: scale(1.05);
-        }
+#logo:hover {
+    transform: scale(1.05);
+}
 
-        nav ul {
-            display: flex;
-            list-style: none;
-            gap: 0.8rem;
-        }
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 0.8rem;
+}
 
-        .nav-button {
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-            color: var(--text-primary);
-            text-decoration: none;
-            font-weight: 500;
-            font-size: 0.95rem;
-            padding: 0.6rem 1.2rem;
-            border-radius: 6px;
-            background-color: var(--bg-tertiary);
-            transition: var(--transition);
-            border: 1px solid transparent;
-        }
+.nav-button {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--text-primary);
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 0.95rem;
+    padding: 0.6rem 1.2rem;
+    border-radius: 6px;
+    background-color: var(--bg-tertiary);
+    transition: var(--transition);
+    border: 1px solid transparent;
+}
 
-        .nav-button:hover {
-            background-color: var(--accent);
-            color: white;
-        }
+.nav-button:hover {
+    background-color: var(--accent);
+    color: white;
+}
 
-        .nav-button.home {
-            background-color: var(--accent);
-            color: white;
-        }
+.nav-button.home {
+    background-color: var(--accent);
+    color: white;
+}
 
-        .nav-button.home:hover {
-            background-color: var(--accent-hover);
-        }
+.nav-button.home:hover {
+    background-color: var(--accent-hover);
+}
 
-        /* Projects Section */
-        .projects {
-            margin-bottom: 3rem;
-        }
+/* Projects Section */
+.projects {
+    margin-bottom: 3rem;
+}
 
-        .section-title {
-            font-size: 1.5rem;
-            font-weight: 600;
-            margin-bottom: 1.5rem;
-            color: var(--text-primary);
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-        }
+.section-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+    color: var(--text-primary);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
 
-        .section-title::before {
-            content: '';
-            display: inline-block;
-            width: 24px;
-            height: 1px;
-            background-color: var(--text-secondary);
-        }
+.section-title::before {
+    content: '';
+    display: inline-block;
+    width: 24px;
+    height: 1px;
+    background-color: var(--text-secondary);
+}
 
-        /* README Content */
-        #readme-container {
-            margin-bottom: 3rem;
-            padding: 1.5rem;
-            background-color: var(--bg-secondary);
-            border-radius: 8px;
-            border: 1px solid var(--border);
-        }
+/* README Content */
+#readme-container {
+    margin-bottom: 3rem;
+    padding: 1.5rem;
+    background-color: var(--bg-secondary);
+    border-radius: 8px;
+    border: 1px solid var(--border);
+}
 
-        #readme-container h1 {
-            font-size: 1.8rem;
-            font-weight: 700;
-            margin: 1.5rem 0 1rem;
-            color: var(--text-primary);
-            padding-bottom: 0.5rem;
-            border-bottom: 1px solid var(--border);
-        }
+#readme-container h1 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin: 1.5rem 0 1rem;
+    color: var(--text-primary);
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid var(--border);
+}
 
-        #readme-container h2 {
-            font-size: 1.4rem;
-            font-weight: 600;
-            margin: 1.5rem 0 1rem;
-            color: var(--text-primary);
-        }
+#readme-container h2 {
+    font-size: 1.4rem;
+    font-weight: 600;
+    margin: 1.5rem 0 1rem;
+    color: var(--text-primary);
+}
 
-        #readme-container h3 {
-            font-size: 1.2rem;
-            font-weight: 500;
-            margin: 1.5rem 0 1rem;
-            color: var(--text-primary);
-        }
+#readme-container h3 {
+    font-size: 1.2rem;
+    font-weight: 500;
+    margin: 1.5rem 0 1rem;
+    color: var(--text-primary);
+}
 
-        #readme-container p {
-            margin-bottom: 1rem;
-            color: var(--text-secondary);
-            line-height: 1.7;
-        }
+#readme-container p {
+    margin-bottom: 1rem;
+    color: var(--text-secondary);
+    line-height: 1.7;
+}
 
-        #readme-container a {
-            color: var(--accent);
-            text-decoration: none;
-            transition: var(--transition);
-        }
+#readme-container a {
+    color: var(--accent);
+    text-decoration: none;
+    transition: var(--transition);
+}
 
-        #readme-container a:hover {
-            color: var(--accent-hover);
-            text-decoration: underline;
-        }
+#readme-container a:hover {
+    color: var(--accent-hover);
+    text-decoration: underline;
+}
 
-        #readme-container code {
-            background-color: var(--bg-tertiary);
-            padding: 0.2rem 0.4rem;
-            border-radius: 4px;
-            font-family: 'Fira Code', monospace;
-            color: var(--text-primary);
-            font-size: 0.9rem;
-        }
+#readme-container code {
+    background-color: var(--bg-tertiary);
+    padding: 0.2rem 0.4rem;
+    border-radius: 4px;
+    font-family: 'Fira Code', monospace;
+    color: var(--text-primary);
+    font-size: 0.9rem;
+}
 
-        #readme-container pre {
-            background-color: var(--bg-tertiary);
-            padding: 1rem;
-            border-radius: 6px;
-            overflow-x: auto;
-            margin: 1.5rem 0;
-            border: 1px solid var(--border);
-        }
+#readme-container pre {
+    background-color: var(--bg-tertiary);
+    padding: 1rem;
+    border-radius: 6px;
+    overflow-x: auto;
+    margin: 1.5rem 0;
+    border: 1px solid var(--border);
+}
 
-        #readme-container pre code {
-            background: none;
-            padding: 0;
-        }
+#readme-container pre code {
+    background: none;
+    padding: 0;
+}
 
-        #readme-container blockquote {
-            border-left: 3px solid var(--accent);
-            padding-left: 1rem;
-            margin: 1.5rem 0;
-            color: var(--text-secondary);
-        }
+#readme-container blockquote {
+    border-left: 3px solid var(--accent);
+    padding-left: 1rem;
+    margin: 1.5rem 0;
+    color: var(--text-secondary);
+}
 
-        /* GitHub Repo Card Styles */
-        #github-projects ul {
-            list-style: none;
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-            gap: 1.5rem;
-            padding: 0;
-        }
-        
-        #github-projects li {
-            background-color: var(--bg-secondary);
-            border: 1px solid var(--border);
-            border-radius: 8px;
-            padding: 1.2rem;
-            transition: var(--transition);
-            height: 100%;
-            display: flex;
-            flex-direction: column;
-        }
-        
-        #github-projects li:hover {
-            border-color: var(--accent);
-            box-shadow: var(--card-shadow);
-        }
-        
-        #github-projects .repo-card-header {
-            display: flex;
-            align-items: center;
-            margin-bottom: 0.8rem;
-        }
-        
-        #github-projects .repo-icon {
-            color: var(--accent);
-            margin-right: 0.6rem;
-            font-size: 1rem;
-        }
-        
-        #github-projects .repo-name {
-            color: var(--accent);
-            font-weight: 600;
-            font-size: 1rem;
-            text-decoration: none;
-            overflow: hidden;
-            text-overflow: ellipsis;
-            white-space: nowrap;
-            flex: 1;
-        }
-        
-        #github-projects .repo-name:hover {
-            text-decoration: underline;
-        }
-        
-        #github-projects .repo-description {
-            color: var(--text-secondary);
-            font-size: 0.9rem;
-            line-height: 1.5;
-            margin-bottom: 1rem;
-            display: -webkit-box;
-            -webkit-line-clamp: 3;
-            -webkit-box-orient: vertical;
-            overflow: hidden;
-            flex: 1;
-        }
-        
-        #github-projects .repo-meta {
-            display: flex;
-            align-items: center;
-            margin-top: auto;
-            font-size: 0.85rem;
-            color: var(--text-tertiary);
-        }
-        
-        #github-projects .repo-language {
-            display: flex;
-            align-items: center;
-            margin-right: 1rem;
-        }
-        
-        #github-projects .language-color {
-            width: 12px;
-            height: 12px;
-            border-radius: 50%;
-            background-color: var(--accent);
-            margin-right: 0.4rem;
-        }
-        
-        #github-projects .repo-stars, 
-        #github-projects .repo-forks {
-            display: flex;
-            align-items: center;
-            margin-right: 1rem;
-        }
-        
-        #github-projects .repo-meta i {
-            margin-right: 0.3rem;
-            font-size: 0.8rem;
-        }
-        
-        #github-projects .repo-updated {
-            margin-left: auto;
-            font-size: 0.8rem;
-        }
+/* GitHub Repo Card Styles */
+#github-projects ul {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1.5rem;
+    padding: 0;
+}
 
-        /* Loading Animation */
-        .loading {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            padding: 2rem;
-        }
+#github-projects li {
+    background-color: var(--bg-secondary);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 1.2rem;
+    transition: var(--transition);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
 
-        .spinner {
-            width: 32px;
-            height: 32px;
-            border: 3px solid rgba(255, 255, 255, 0.1);
-            border-left-color: var(--accent);
-            border-radius: 50%;
-            animation: spin 1s linear infinite;
-        }
+#github-projects li:hover {
+    border-color: var(--accent);
+    box-shadow: var(--card-shadow);
+}
 
-        @keyframes spin {
-            to {
-                transform: rotate(360deg);
-            }
-        }
+#github-projects .repo-card-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.8rem;
+}
 
-        /* Responsive */
-        @media (max-width: 768px) {
-            .wrapper {
-                padding: 1.5rem;
-            }
-            
-            header {
-                flex-direction: column;
-                gap: 1.2rem;
-                align-items: flex-start;
-            }
-            
-            nav ul {
-                flex-wrap: wrap;
-            }
-            
-            #github-projects ul {
-                grid-template-columns: 1fr;
-            }
-        }
+#github-projects .repo-icon {
+    color: var(--accent);
+    margin-right: 0.6rem;
+    font-size: 1rem;
+}
 
-        @media (max-width: 480px) {
-            .wrapper {
-                padding: 1rem;
-            }
-            
-            nav ul {
-                flex-direction: column;
-                width: 100%;
-            }
-            
-            .nav-button {
-                width: 100%;
-                justify-content: center;
-            }
-        }
+#github-projects .repo-name {
+    color: var(--accent);
+    font-weight: 600;
+    font-size: 1rem;
+    text-decoration: none;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    flex: 1;
+}
 
-        /* Logo animation */
-        #logo.clicked {
-            animation: rotate 0.6s ease-in-out;
-        }
+#github-projects .repo-name:hover {
+    text-decoration: underline;
+}
 
-        @keyframes rotate {
-            0% {
-                transform: rotate(0deg);
-            }
-            100% {
-                transform: rotate(360deg);
-            }
-        }
+#github-projects .repo-description {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    line-height: 1.5;
+    margin-bottom: 1rem;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    flex: 1;
+}
+
+#github-projects .repo-meta {
+    display: flex;
+    align-items: center;
+    margin-top: auto;
+    font-size: 0.85rem;
+    color: var(--text-tertiary);
+}
+
+#github-projects .repo-language {
+    display: flex;
+    align-items: center;
+    margin-right: 1rem;
+}
+
+#github-projects .language-color {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: var(--accent);
+    margin-right: 0.4rem;
+}
+
+#github-projects .repo-stars, 
+#github-projects .repo-forks {
+    display: flex;
+    align-items: center;
+    margin-right: 1rem;
+}
+
+#github-projects .repo-meta i {
+    margin-right: 0.3rem;
+    font-size: 0.8rem;
+}
+
+#github-projects .repo-updated {
+    margin-left: auto;
+    font-size: 0.8rem;
+}
+
+/* Loading Animation */
+.loading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+}
+
+.spinner {
+    width: 32px;
+    height: 32px;
+    border: 3px solid rgba(255, 255, 255, 0.1);
+    border-left-color: var(--accent);
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .wrapper {
+        padding: 1.5rem;
+    }
+    
+    header {
+        gap: 1.2rem;
+        align-items: flex-start;
+    }
+    
+    nav ul {
+        flex-wrap: wrap;
+    }
+    
+    #github-projects ul {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    header {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    #github-projects ul {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Logo animation */
+#logo.clicked {
+    animation: rotate 0.6s ease-in-out;
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
 
 #readme-container h2 {
     display:none;
