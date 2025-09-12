@@ -141,10 +141,18 @@ nav ul {
 }
 
 .block h3 {
+    width:fit-content;
+    border-bottom: 1px dashed var(--border);
     font-size: 1.2rem;
     font-weight: 500;
     margin: 1.5rem 0 1rem;
     color: var(--text-primary);
+    transition: var(--transition);
+}
+.block h3:hover {
+    color:var(--accent-hover);
+    cursor: pointer;
+    border-bottom-color: var(--accent-hover);
 }
 
 .block p {
@@ -388,20 +396,17 @@ nav ul {
     overflow: hidden;
     text-decoration: none;
     transition: all 0.4s ease;
-    filter: blur(8px) brightness(0.7);
+    filter: blur(8px) brightness(0.3);
     transform: scale(0.98);
     margin: 40px 0;
 }
 
 #demos-container a:hover {
-    filter: blur(0px) brightness(1);
+    filter: blur(0px) brightness(0.7);
     transform: scale(1);
     box-shadow: 0 8px 32px rgba(0,0,0,0.3);
 }
 
-#demos-container a:hover::before {
-    background: linear-gradient(45deg, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0.2) 100%);
-}
 .demo {
     position: relative;
 }
@@ -426,17 +431,18 @@ nav ul {
     opacity: 0;
     transform: translate(-50%, -60%);
 }
-#demos-container a::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: linear-gradient(45deg, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.4) 100%);
-    z-index: 1;
-    transition: all 0.4s ease;
+
+#readme-container img {
+    height: 35px;
+    margin: 5px;
 }
-#demos-container a:hover::before {
-    background: linear-gradient(45deg, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0.2) 100%);
+#readme-container a {
+    height: 40px;
+    cursor:default;
+}
+#readme-container p {
+    margin-bottom: 25px;
+    display:flex;
+    flex-wrap:wrap;
+    justify-content: space-between;
 }
