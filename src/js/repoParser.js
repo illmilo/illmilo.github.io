@@ -41,7 +41,7 @@ async function fetchGitHubRepos() {
         // Add each repository as a list item
         repos.forEach(repo => {
             // Skip forks and empty repos
-            if (repo.fork || !repo.description) return;
+            if (repo.name.startsWith('illmilo')) return;
             
             const listItem = document.createElement('li');
             

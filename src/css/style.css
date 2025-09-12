@@ -116,15 +116,15 @@ nav ul {
 }
 
 /* README Content */
-#readme-container {
+.block {
     margin-bottom: 3rem;
-    padding: 1.5rem;
+    padding: 0 1.5rem;
     background-color: var(--bg-secondary);
     border-radius: 8px;
     border: 1px solid var(--border);
 }
 
-#readme-container h1 {
+.block h1 {
     font-size: 1.8rem;
     font-weight: 700;
     margin: 1.5rem 0 1rem;
@@ -133,38 +133,38 @@ nav ul {
     border-bottom: 1px solid var(--border);
 }
 
-#readme-container h2 {
+.block h2 {
     font-size: 1.4rem;
     font-weight: 600;
     margin: 1.5rem 0 1rem;
     color: var(--text-primary);
 }
 
-#readme-container h3 {
+.block h3 {
     font-size: 1.2rem;
     font-weight: 500;
     margin: 1.5rem 0 1rem;
     color: var(--text-primary);
 }
 
-#readme-container p {
+.block p {
     margin-bottom: 1rem;
     color: var(--text-secondary);
     line-height: 1.7;
 }
 
-#readme-container a {
+.block a {
     color: var(--accent);
     text-decoration: none;
     transition: var(--transition);
 }
 
-#readme-container a:hover {
+.block a:hover {
     color: var(--accent-hover);
     text-decoration: underline;
 }
 
-#readme-container code {
+.block code {
     background-color: var(--bg-tertiary);
     padding: 0.2rem 0.4rem;
     border-radius: 4px;
@@ -173,7 +173,7 @@ nav ul {
     font-size: 0.9rem;
 }
 
-#readme-container pre {
+.block pre {
     background-color: var(--bg-tertiary);
     padding: 1rem;
     border-radius: 6px;
@@ -182,12 +182,12 @@ nav ul {
     border: 1px solid var(--border);
 }
 
-#readme-container pre code {
+.block pre code {
     background: none;
     padding: 0;
 }
 
-#readme-container blockquote {
+.block blockquote {
     border-left: 3px solid var(--accent);
     padding-left: 1rem;
     margin: 1.5rem 0;
@@ -370,6 +370,73 @@ nav ul {
     }
 }
 
-#readme-container h2 {
+.block h2 {
     display:none;
+}
+
+#demos-container a {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 400px;
+    width: 100%;
+    background-size: cover !important;
+    background-position: center -20px !important;
+    background-repeat: no-repeat !important;
+    border-radius: 12px;
+    overflow: hidden;
+    text-decoration: none;
+    transition: all 0.4s ease;
+    filter: blur(8px) brightness(0.7);
+    transform: scale(0.98);
+    margin: 40px 0;
+}
+
+#demos-container a:hover {
+    filter: blur(0px) brightness(1);
+    transform: scale(1);
+    box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+}
+
+#demos-container a:hover::before {
+    background: linear-gradient(45deg, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0.2) 100%);
+}
+.demo {
+    position: relative;
+}
+.demo span {
+    position: absolute;
+
+    cursor:pointer;
+    top: 50%;
+    left:50%;
+    transform: translate(-50%, -50%);
+    color: #ffffff;
+    font-size: 1.5rem;
+    font-weight: 600;
+    text-align: center;
+    padding: 20px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
+    opacity: 1;
+    transition: all 0.4s ease;
+}
+
+.demo span:hover {
+    opacity: 0;
+    transform: translate(-50%, -60%);
+}
+#demos-container a::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(45deg, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.4) 100%);
+    z-index: 1;
+    transition: all 0.4s ease;
+}
+#demos-container a:hover::before {
+    background: linear-gradient(45deg, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0.2) 100%);
 }
