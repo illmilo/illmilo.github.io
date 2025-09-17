@@ -398,7 +398,6 @@ nav ul {
     transition: all 0.4s ease;
     filter: blur(8px) brightness(0.3);
     transform: scale(0.98);
-    margin: 40px 0;
 }
 
 #demos-container a:hover {
@@ -409,22 +408,34 @@ nav ul {
 
 .demo {
     position: relative;
+    margin-bottom: 3rem;
+    border-radius: 12px;
+    overflow: hidden;
+    transition: var(--transition);
+    border: 1px solid var(--border);
+    background: var(--bg-secondary);
 }
+
 .demo span {
     position: absolute;
-
     cursor:pointer;
     top: 50%;
     left:50%;
     transform: translate(-50%, -50%);
     color: #ffffff;
-    font-size: 1.5rem;
+    font-size: 2rem;
     font-weight: 600;
     text-align: center;
     padding: 20px;
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
+    text-shadow: 0 0 10px rgba(0,0,0,0.8);
     opacity: 1;
     transition: all 0.4s ease;
+}
+.demo:nth-child(2n) span {
+    border-left: 2px dashed white;
+}
+.demo:nth-child(2n+1) span {
+    border-right: 2px dashed white;
 }
 
 .demo span:hover {
