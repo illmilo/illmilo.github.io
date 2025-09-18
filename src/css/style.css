@@ -115,6 +115,10 @@ nav ul {
     background-color: var(--text-secondary);
 }
 
+.section-title a {
+    color: aquamarine;
+}
+
 /* README Content */
 .block {
     margin-bottom: 3rem;
@@ -141,18 +145,10 @@ nav ul {
 }
 
 .block h3 {
-    width:fit-content;
-    border-bottom: 1px dashed var(--border);
     font-size: 1.2rem;
     font-weight: 500;
     margin: 1.5rem 0 1rem;
     color: var(--text-primary);
-    transition: var(--transition);
-}
-.block h3:hover {
-    color:var(--accent-hover);
-    cursor: pointer;
-    border-bottom-color: var(--accent-hover);
 }
 
 .block p {
@@ -378,10 +374,6 @@ nav ul {
     }
 }
 
-.block h2 {
-    display:none;
-}
-
 #demos-container a {
     position: relative;
     display: flex;
@@ -443,17 +435,27 @@ nav ul {
     transform: translate(-50%, -60%);
 }
 
-#readme-container img {
+.readme-container img {
     height: 35px;
     margin: 5px;
 }
-#readme-container a {
+.readme-container a {
     height: 40px;
     cursor:default;
 }
-#readme-container p {
+#tech-stack .readme-container p {
     margin-bottom: 25px;
     display:flex;
     flex-wrap:wrap;
     justify-content: space-between;
+}
+
+.readme-container h2:last-of-type,
+.readme-container p:last-of-type img {
+    display: none;
+}
+
+.readme-container h2 {
+    padding-bottom:7px;
+    border-bottom: #2d2d2d solid 2px;
 }
