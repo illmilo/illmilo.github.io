@@ -1,29 +1,4 @@
-
-// Language color mapping
-const languageColors = {
-    'JavaScript': '#f1e05a',
-    'TypeScript': '#2b7489',
-    'Python': '#3572A5',
-    'Java': '#b07219',
-    'C++': '#f34b7d',
-    'C': '#555555',
-    'C#': '#178600',
-    'PHP': '#4F5D95',
-    'Ruby': '#701516',
-    'CSS': '#563d7c',
-    'HTML': '#e34c26',
-    'Vue': '#41b883',
-    'React': '#61dafb',
-    'Go': '#00ADD8',
-    'Rust': '#dea584',
-    'Shell': '#89e051',
-    'Swift': '#ffac45',
-    'Kotlin': '#F18E33',
-    'Dart': '#00B4AB',
-    'Scala': '#c22d40'
-};
-
-// Fetch GitHub repositories
+// Fetch GitHub repositories with additional details
 async function fetchGitHubRepos() {
     try {
         const response = await fetch('https://api.github.com/users/illmilo/repos?sort=updated&per_page=10');
@@ -38,46 +13,67 @@ async function fetchGitHubRepos() {
         // Create a new unordered list
         const projectsList = document.createElement('ul');
         
-        // Add each repository as a list item
-        repos.forEach(repo => {
-            // Skip forks and empty repos
-            if (repo.name.startsWith('illmilo')) return;
-            
-            const listItem = document.createElement('li');
-            
-            // Create repo card HTML structure
-            listItem.innerHTML = `
-                <div class="repo-card-header">
-                    <i class="fas fa-book repo-icon"></i>
-                    <a href="${repo.html_url}" class="repo-name" target="_blank" rel="noopener noreferrer">
-                        ${repo.name}
-                    </a>
-                </div>
-                <p class="repo-description">${repo.description || 'No description available'}</p>
-                <div class="repo-meta">
-                    ${repo.language ? `
-                        <div class="repo-language">
-                            <span class="language-color" style="background-color: ${languageColors[repo.language] || '#7b68ee'}"></span>
-                            ${repo.language}
+        // Fetch additional details for each repository
+        const reposWithDetails = await Promise.all(
+            repos.map(async repo => {
+                if (repo.name.startsWith('illmilo')) return null;
+                
+                try {
+                    // Fetch repository details to get homepage and topics
+                    const detailsResponse = await fetch(repo.url);
+                    if (!detailsResponse.ok) throw new Error('Failed to fetch repo details');
+                    
+                    const repoDetails = await detailsResponse.json();
+                    
+                    return {
+                        ...repo,
+                        homepage: repoDetails.homepage,
+                        topics: repoDetails.topics || []
+                    };
+                } catch (error) {
+                    console.error(`Error fetching details for ${repo.name}:`, error);
+                    return {
+                        ...repo,
+                        homepage: null,
+                        topics: []
+                    };
+                }
+            })
+        );
+        
+        // Filter out null values and add each repository as a list item
+        reposWithDetails
+            .filter(repo => repo !== null)
+            .forEach(repo => {
+                const listItem = document.createElement('li');
+                
+                // Create repo card HTML structure
+                listItem.innerHTML = `
+                    <div class="repo-card-header">
+                        <i class="fas fa-book repo-icon"></i>
+                        <a href="${repo.html_url}" class="repo-name" target="_blank" rel="noopener noreferrer">
+                            ${repo.name}
+                        </a>
+                        ${repo.homepage ? `
+                            <a href="${repo.homepage}" class="repo-demo-link" target="_blank" rel="noopener noreferrer" title="Live Demo">
+                                <i class="fas fa-external-link-alt"></i>
+                                Demo
+                            </a>
+                        ` : ''}
+                    </div>
+                    <p class="repo-description">${repo.description || 'No description available'}</p>
+                    ${repo.topics.length > 0 ? `
+                        <div class="repo-topics">
+                            ${repo.topics.map(topic => `
+                                <span class="repo-topic">${topic}</span>
+                            `).join('')}
                         </div>
                     ` : ''}
-                    <div class="repo-stars">
-                        <i class="fas fa-star"></i>
-                        ${repo.stargazers_count}
-                    </div>
-                    <div class="repo-forks">
-                        <i class="fas fa-code-branch"></i>
-                        ${repo.forks_count}
-                    </div>
-                    <div class="repo-updated">
-                        Updated ${formatDate(repo.updated_at)}
-                    </div>
-                </div>
-            `;
-            
-            // Append to projects list
-            projectsList.appendChild(listItem);
-        });
+                `;
+                
+                // Append to projects list
+                projectsList.appendChild(listItem);
+            });
         
         // Append the list to the container
         projectsContainer.appendChild(projectsList);
