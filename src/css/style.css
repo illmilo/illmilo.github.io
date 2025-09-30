@@ -73,18 +73,17 @@ nav ul {
     transition: var(--transition);
     border: 1px solid transparent;
 }
-
 .nav-button:hover {
     background-color: var(--accent);
     color: white;
 }
 
-.nav-button.home {
+.nav-button.highlight {
     background-color: var(--accent);
     color: white;
 }
 
-.nav-button.home:hover {
+.nav-button.highlight:hover {
     background-color: var(--accent-hover);
 }
 

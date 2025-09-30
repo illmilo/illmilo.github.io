@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Cheatsheet</title>
+    <link rel="stylesheet" href="src/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .repo-card-header {
+            margin:0 !important;
+            width:max-content !important;
+            text-decoration: none;
+        }
+        li {
+            width: max-content !important;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <header>
+            <img id="logo" src="https://avatars.githubusercontent.com/u/154306331?v=4" alt="Logo">
+            <nav>
+                <ul>
+                    <li>
+                        <a href="index.html" class="nav-button highlight">
+                            <i class="fa-solid fa-globe"></i>
+                            <span class="text">Author</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <section>
+            <h2 class="section-title">Cheatsheet List</h2>
+            <div id="github-projects">
+                <ul>
+                    <li>
+                        <a href="css.html" class="repo-card-header repo-name">
+                            <i class="fas fa-book repo-icon"></i>
+                            CSS
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </section>
+    </div>
+    <script src="src/js/toggleLogo.js"></script>
+</body>
+</html>
