@@ -6,18 +6,7 @@
     <title>CSS Cheatsheet</title>
     <link rel="stylesheet" href="src/css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <style>
-        .keywords {
-            margin: 20px 0;
-            font-style: italic; 
-        }
-        .block img {
-            width: 100%;
-            border-radius: 20px;
-            margin-bottom: 20px;
-            box-shadow: 0 0 17px 5px black;
-        }
-    </style>
+    <link rel="stylesheet" href="src/css/css.css">
 </head>
 <body>
     <div class="wrapper">
@@ -41,17 +30,253 @@
             </nav>
         </header>
         <section>
-            <h2 class="section-title">Flexbox</h2>
+            <h1 class="section-title">Flexbox</h1>
             <div class="block">
-                <h3>Keywords</h3>
-                <p class="keywords">
-                    flex, flex-direction, flex-wrap, 
-                    justify-content, align-items, flex-grow, flex-shrink, flex-basis, align-self
-                </p>
-                <h3>Parent Properties</h3>
-                <img src="src/img/flexboxA.png" alt="Flexbox Layout 1" style="filter:invert(100%); box-shadow: 0 0 17px 5px white;">
-                <h3>Child Properties</h3>
-                <img src="src/img/flexboxB.png" alt="Flexbox Layout 2">
+                <h2>Parental Properties</h2>
+                <h3>flex-direction</h3>
+                <div class="flex-container">
+                    <div class="flex-property">
+                        <div class="flex-box">
+                            <div class="flex-row">
+                                <div class="item"></div>
+                                <div class="item"></div>
+                                <div class="item"></div>
+                            </div>
+                            <div class="flex-row">
+                                <div class="item"></div>
+                                <div class="item"></div>
+                                <div class="item"></div>
+                            </div>
+                            <div class="flex-row">
+                                <div class="item"></div>
+                                <div class="item"></div>
+                                <div class="item"></div>
+                            </div>
+                        </div>
+                        <h4>row</h4>
+                    </div>
+                    <div class="flex-property">
+                        <div class="flex-box flex-row">
+                            <div class="flex-col">
+                                <div class="item rot"></div>
+                                <div class="item rot"></div>
+                                <div class="item rot"></div>
+                            </div>
+                            <div class="flex-col">
+                                <div class="item rot"></div>
+                                <div class="item rot"></div>
+                                <div class="item rot"></div>
+                            </div>
+                            <div class="flex-col">
+                                <div class="item rot"></div>
+                                <div class="item rot"></div>
+                                <div class="item rot"></div>
+                            </div>
+                        </div>
+                        <h4>column</h4>
+                    </div>
+                    <div class="flex-property">
+                        <div class="flex-box">
+                            <div class="flex-row-rev">
+                                <div class="item"></div>
+                                <div class="item"></div>
+                                <div class="item"></div>
+                            </div>
+                            <div class="flex-row-rev">
+                                <div class="item"></div>
+                                <div class="item"></div>
+                                <div class="item"></div>
+                            </div>
+                            <div class="flex-row-rev">
+                                <div class="item"></div>
+                                <div class="item"></div>
+                                <div class="item"></div>
+                            </div>
+                        </div>
+                        <h4>row-reverse</h4>
+                    </div>
+                    <div class="flex-property">
+                        <div class="flex-box flex-row">
+                            <div class="flex-col-rev">
+                                <div class="item rot"></div>
+                                <div class="item rot"></div>
+                                <div class="item rot"></div>
+                            </div>
+                            <div class="flex-col-rev">
+                                <div class="item rot"></div>
+                                <div class="item rot"></div>
+                                <div class="item rot"></div>
+                            </div>
+                            <div class="flex-col-rev">
+                                <div class="item rot"></div>
+                                <div class="item rot"></div>
+                                <div class="item rot"></div>
+                            </div>
+                        </div>
+                        <h4>column-reverse</h4>
+                    </div>
+                </div>
+                <h3>align-items (cross axis)</h3>
+                <div class="flex-container">
+                    <div class="flex-property">
+                        <div class="flex-box align-items">
+                            <div class="flex-row align-start">
+                                <div class="item rot"></div>
+                                <div class="item rot"></div>
+                                <div class="item rot"></div>
+                            </div>
+                        </div>
+                        <h4>flex-start</h4>
+                    </div>
+                    <div class="flex-property">
+                        <div class="flex-box align-items">
+                            <div class="flex-row align-center">
+                                <div class="item rot"></div>
+                                <div class="item rot"></div>
+                                <div class="item rot"></div>
+                            </div>
+                        </div>
+                        <h4>center</h4>
+                    </div>
+                    <div class="flex-property">
+                        <div class="flex-box align-items">
+                            <div class="flex-row align-end">
+                                <div class="item rot"></div>
+                                <div class="item rot"></div>
+                                <div class="item rot"></div>
+                            </div>
+                        </div>
+                        <h4>flex-end</h4>
+                    </div>
+                    <div class="flex-property">
+                        <div class="flex-box align-items">
+                            <div class="flex-row align-stretch">
+                                <div class="item rot"></div>
+                                <div class="item rot"></div>
+                                <div class="item rot"></div>
+                            </div>
+                        </div>
+                        <h4>stretch</h4>
+                    </div>
+                    <div class="flex-property">
+                        <div class="flex-box align-items">
+                            <div class="flex-row align-baseline">
+                                <div class="item rot"></div>
+                                <div class="item rot"></div>
+                                <div class="item rot"></div>
+                            </div>
+                        </div>
+                        <h4>baseline</h4>
+                    </div>
+                </div>
+                <h3>justify-content (main axis)</h3>
+                <div class="flex-container">
+                    <div class="flex-property">
+                        <div class="flex-box justify-content align-items">
+                            <div class="flex-row justify-start">
+                                <div class="item"></div>
+                                <div class="item"></div>
+                                <div class="item"></div>
+                            </div>
+                        </div>
+                        <h4>flex-start</h4>
+                    </div>
+                    <div class="flex-property">
+                        <div class="flex-box justify-content align-items">
+                            <div class="flex-row justify-center">
+                                <div class="item"></div>
+                                <div class="item"></div>
+                                <div class="item"></div>
+                            </div>
+                        </div>
+                        <h4>center</h4>
+                    </div>
+                    <div class="flex-property">
+                        <div class="flex-box justify-content align-items">
+                            <div class="flex-row justify-end">
+                                <div class="item"></div>
+                                <div class="item"></div>
+                                <div class="item"></div>
+                            </div>
+                        </div>
+                        <h4>flex-end</h4>
+                    </div>
+                    <div class="flex-property">
+                        <div class="flex-box justify-content align-items">
+                            <div class="flex-row justify-around">
+                                <div class="item"></div>
+                                <div class="item"></div>
+                                <div class="item"></div>
+                            </div>
+                        </div>
+                        <h4>space-around</h4>
+                    </div>
+                    <div class="flex-property">
+                        <div class="flex-box justify-content align-items">
+                            <div class="flex-row justify-evenly">
+                                <div class="item"></div>
+                                <div class="item"></div>
+                                <div class="item"></div>
+                            </div>
+                        </div>
+                        <h4>space-evenly</h4>
+                    </div>
+                    <div class="flex-property">
+                        <div class="flex-box justify-content align-items">
+                            <div class="flex-row justify-between">
+                                <div class="item"></div>
+                                <div class="item"></div>
+                                <div class="item"></div>
+                            </div>
+                        </div>
+                        <h4>space-between</h4>
+                    </div>
+                </div>
+                <h3>align-content (wrapped cross axis)</h3>
+                <div class="flex-container">
+                    <div class="flex-property">
+                        <div class="flex-box align-content">
+                            <div class="flex-row content-start">
+                                <div class="item"></div>
+                                <div class="item"></div>
+                                <div class="item"></div>
+                                <div class="item"></div>
+                                <div class="item"></div>
+                                <div class="item"></div>
+                            </div>
+                        </div>
+                        <h4>flex-start</h4>
+                    </div>
+                    <div class="flex-property">
+                        <div class="flex-box align-content">
+                            <div class="flex-row content-center">
+                                <div class="item"></div>
+                                <div class="item"></div>
+                                <div class="item"></div>
+                                <div class="item"></div>
+                                <div class="item"></div>
+                                <div class="item"></div>
+                            </div>
+                        </div>
+                        <h4>center</h4>
+                    </div>
+                    <div class="flex-property">
+                        <div class="flex-box align-content">
+                            <div class="flex-row content-end">
+                                <div class="item"></div>
+                                <div class="item"></div>
+                                <div class="item"></div>
+                                <div class="item"></div>
+                                <div class="item"></div>
+                                <div class="item"></div>
+                            </div>
+                        </div>
+                        <h4>flex-end</h4>
+                    </div>
+                </div>
+                <!-- <img src="src/img/flexboxA.png" alt="Flexbox Layout 1" style="filter:invert(100%); box-shadow: 0 0 17px 5px white;"> -->
+                <h3>Subsidiary Properties</h3>
+                <!-- <img src="src/img/flexboxB.png" alt="Flexbox Layout 2"> -->
             </div>
         </section>
     </div>
