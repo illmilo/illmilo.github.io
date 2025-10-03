@@ -165,6 +165,12 @@
     flex-wrap: wrap;
     height: calc(var(--small) * 3 + var(--cross-gap) * 2);
 }
+.flex .item {
+    width: var(--large);
+    display:flex;
+    flex-wrap: wrap;
+    place-content: center center;
+}
 .content-start {
     align-content:flex-start;
 }
