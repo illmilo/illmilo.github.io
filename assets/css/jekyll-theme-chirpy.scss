@@ -1,0 +1,25 @@
+---
+---
+
+@use 'abstracts/variables' with (
+  $theme: '{{ site.theme_mode }}'
+);
+
+/* prettier-ignore */
+@use 'main
+{%- if jekyll.environment == 'production' -%}
+  .bundle
+{%- endif -%}
+';
+
+/* append your custom style below */
+/* Этот селектор Chirpy использует для темной темы */
+html[data-bs-theme="dark"] img {
+  filter: invert(1) hue-rotate(180deg);
+}
+
+/* Исключение: если какие-то картинки (например, аватарку) инвертировать НЕ нужно, 
+   вы сможете добавить им в markdown класс .no-invert */
+html[data-bs-theme="dark"] #avatar img {
+  filter: none;
+}
