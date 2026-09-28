@@ -14,7 +14,7 @@
 
 /* append your custom style below */
 /* Этот селектор Chirpy использует для темной темы */
-html[data-bs-theme="dark"] img {
+html[data-bs-theme="dark"] img:not(.no-invert) {
   filter: invert(1) hue-rotate(180deg);
 }
 
