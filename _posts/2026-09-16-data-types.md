@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 'Типы данных'
-# last_modified_at: 
+last_modified_at: 2026-10-06
 published: true
 categories: [Введение в Python]
 tags: []
